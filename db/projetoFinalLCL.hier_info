@@ -1,0 +1,118 @@
+|projetoFinalLCL
+dc[0] <= timer:inst10.deci[0]
+dc[1] <= timer:inst10.deci[1]
+dc[2] <= timer:inst10.deci[2]
+dc[3] <= timer:inst10.deci[3]
+clk => inst6.IN0
+start => inst7.PRESET
+min[0] <= timer:inst10.min[0]
+min[1] <= timer:inst10.min[1]
+min[2] <= timer:inst10.min[2]
+min[3] <= timer:inst10.min[3]
+sg[0] <= timer:inst10.seg[0]
+sg[1] <= timer:inst10.seg[1]
+sg[2] <= timer:inst10.seg[2]
+sg[3] <= timer:inst10.seg[3]
+tseg[0] <= timer:inst10.tseg[0]
+tseg[1] <= timer:inst10.tseg[1]
+tseg[2] <= timer:inst10.tseg[2]
+tseg[3] <= timer:inst10.tseg[3]
+
+
+|projetoFinalLCL|timer:inst10
+end <= counterSeis:inst5.ask
+clk => counterDez:inst2.clk
+reset => counterDez:inst2.reset
+reset => counterDez:inst3.reset
+reset => counterSeis:inst4.reset
+reset => counterSeis:inst5.reset
+deci[0] <= a[0].DB_MAX_OUTPUT_PORT_TYPE
+deci[1] <= a[1].DB_MAX_OUTPUT_PORT_TYPE
+deci[2] <= a[2].DB_MAX_OUTPUT_PORT_TYPE
+deci[3] <= a[3].DB_MAX_OUTPUT_PORT_TYPE
+min[0] <= d[0].DB_MAX_OUTPUT_PORT_TYPE
+min[1] <= d[1].DB_MAX_OUTPUT_PORT_TYPE
+min[2] <= d[2].DB_MAX_OUTPUT_PORT_TYPE
+min[3] <= d[3].DB_MAX_OUTPUT_PORT_TYPE
+seg[0] <= b[0].DB_MAX_OUTPUT_PORT_TYPE
+seg[1] <= b[1].DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= b[2].DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= b[3].DB_MAX_OUTPUT_PORT_TYPE
+tseg[0] <= c[0].DB_MAX_OUTPUT_PORT_TYPE
+tseg[1] <= c[1].DB_MAX_OUTPUT_PORT_TYPE
+tseg[2] <= c[2].DB_MAX_OUTPUT_PORT_TYPE
+tseg[3] <= c[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoFinalLCL|timer:inst10|counterSeis:inst5
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => ask~reg0.CLK
+reset => q[0]~reg0.PRESET
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.PRESET
+reset => q[3]~reg0.ACLR
+reset => ask~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ask <= ask~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoFinalLCL|timer:inst10|counterSeis:inst4
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => ask~reg0.CLK
+reset => q[0]~reg0.PRESET
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.PRESET
+reset => q[3]~reg0.ACLR
+reset => ask~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ask <= ask~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoFinalLCL|timer:inst10|counterDez:inst3
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => ask~reg0.CLK
+reset => q[0]~reg0.PRESET
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.PRESET
+reset => ask~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ask <= ask~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|projetoFinalLCL|timer:inst10|counterDez:inst2
+clk => q[0]~reg0.CLK
+clk => q[1]~reg0.CLK
+clk => q[2]~reg0.CLK
+clk => q[3]~reg0.CLK
+clk => ask~reg0.CLK
+reset => q[0]~reg0.PRESET
+reset => q[1]~reg0.ACLR
+reset => q[2]~reg0.ACLR
+reset => q[3]~reg0.PRESET
+reset => ask~reg0.ACLR
+q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= q[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ask <= ask~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

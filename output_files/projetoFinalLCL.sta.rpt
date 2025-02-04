@@ -1,0 +1,1521 @@
+TimeQuest Timing Analyzer report for projetoFinalLCL
+Tue Feb  4 10:14:22 2025
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'timer:inst10|counterSeis:inst4|ask'
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Setup: 'timer:inst10|counterDez:inst2|ask'
+ 14. Slow Model Setup: 'timer:inst10|counterDez:inst3|ask'
+ 15. Slow Model Hold: 'clk'
+ 16. Slow Model Hold: 'timer:inst10|counterDez:inst2|ask'
+ 17. Slow Model Hold: 'timer:inst10|counterDez:inst3|ask'
+ 18. Slow Model Hold: 'timer:inst10|counterSeis:inst4|ask'
+ 19. Slow Model Recovery: 'timer:inst10|counterSeis:inst4|ask'
+ 20. Slow Model Recovery: 'timer:inst10|counterDez:inst2|ask'
+ 21. Slow Model Recovery: 'timer:inst10|counterDez:inst3|ask'
+ 22. Slow Model Recovery: 'clk'
+ 23. Slow Model Removal: 'clk'
+ 24. Slow Model Removal: 'timer:inst10|counterSeis:inst4|ask'
+ 25. Slow Model Removal: 'timer:inst10|counterDez:inst3|ask'
+ 26. Slow Model Removal: 'timer:inst10|counterDez:inst2|ask'
+ 27. Slow Model Minimum Pulse Width: 'clk'
+ 28. Slow Model Minimum Pulse Width: 'timer:inst10|counterDez:inst2|ask'
+ 29. Slow Model Minimum Pulse Width: 'timer:inst10|counterDez:inst3|ask'
+ 30. Slow Model Minimum Pulse Width: 'timer:inst10|counterSeis:inst4|ask'
+ 31. Clock to Output Times
+ 32. Minimum Clock to Output Times
+ 33. Fast Model Setup Summary
+ 34. Fast Model Hold Summary
+ 35. Fast Model Recovery Summary
+ 36. Fast Model Removal Summary
+ 37. Fast Model Minimum Pulse Width Summary
+ 38. Fast Model Setup: 'timer:inst10|counterSeis:inst4|ask'
+ 39. Fast Model Setup: 'timer:inst10|counterDez:inst2|ask'
+ 40. Fast Model Setup: 'clk'
+ 41. Fast Model Setup: 'timer:inst10|counterDez:inst3|ask'
+ 42. Fast Model Hold: 'clk'
+ 43. Fast Model Hold: 'timer:inst10|counterDez:inst2|ask'
+ 44. Fast Model Hold: 'timer:inst10|counterDez:inst3|ask'
+ 45. Fast Model Hold: 'timer:inst10|counterSeis:inst4|ask'
+ 46. Fast Model Recovery: 'timer:inst10|counterSeis:inst4|ask'
+ 47. Fast Model Recovery: 'timer:inst10|counterDez:inst2|ask'
+ 48. Fast Model Recovery: 'timer:inst10|counterDez:inst3|ask'
+ 49. Fast Model Recovery: 'clk'
+ 50. Fast Model Removal: 'clk'
+ 51. Fast Model Removal: 'timer:inst10|counterSeis:inst4|ask'
+ 52. Fast Model Removal: 'timer:inst10|counterDez:inst3|ask'
+ 53. Fast Model Removal: 'timer:inst10|counterDez:inst2|ask'
+ 54. Fast Model Minimum Pulse Width: 'clk'
+ 55. Fast Model Minimum Pulse Width: 'timer:inst10|counterDez:inst2|ask'
+ 56. Fast Model Minimum Pulse Width: 'timer:inst10|counterDez:inst3|ask'
+ 57. Fast Model Minimum Pulse Width: 'timer:inst10|counterSeis:inst4|ask'
+ 58. Clock to Output Times
+ 59. Minimum Clock to Output Times
+ 60. Multicorner Timing Analysis Summary
+ 61. Clock to Output Times
+ 62. Minimum Clock to Output Times
+ 63. Setup Transfers
+ 64. Hold Transfers
+ 65. Recovery Transfers
+ 66. Removal Transfers
+ 67. Report TCCS
+ 68. Report RSKM
+ 69. Unconstrained Paths
+ 70. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; projetoFinalLCL                                                   ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                 ;
++------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------+
+; Clock Name                         ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                ;
++------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------+
+; clk                                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                ;
+; timer:inst10|counterDez:inst2|ask  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { timer:inst10|counterDez:inst2|ask }  ;
+; timer:inst10|counterDez:inst3|ask  ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { timer:inst10|counterDez:inst3|ask }  ;
+; timer:inst10|counterSeis:inst4|ask ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { timer:inst10|counterSeis:inst4|ask } ;
++------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                                           ;
++------------+-----------------+------------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                         ; Note                                                          ;
++------------+-----------------+------------------------------------+---------------------------------------------------------------+
+; 425.71 MHz ; 425.71 MHz      ; timer:inst10|counterSeis:inst4|ask ;                                                               ;
+; 813.67 MHz ; 420.17 MHz      ; clk                                ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 814.33 MHz ; 500.0 MHz       ; timer:inst10|counterDez:inst2|ask  ; limit due to high minimum pulse width violation (tch)         ;
+; 926.78 MHz ; 500.0 MHz       ; timer:inst10|counterDez:inst3|ask  ; limit due to high minimum pulse width violation (tch)         ;
++------------+-----------------+------------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------------------+
+; Slow Model Setup Summary                                    ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; timer:inst10|counterSeis:inst4|ask ; -1.349 ; -1.907        ;
+; clk                                ; -0.229 ; -0.439        ;
+; timer:inst10|counterDez:inst2|ask  ; -0.228 ; -0.468        ;
+; timer:inst10|counterDez:inst3|ask  ; -0.079 ; -0.266        ;
++------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------+
+; Slow Model Hold Summary                                    ;
++------------------------------------+-------+---------------+
+; Clock                              ; Slack ; End Point TNS ;
++------------------------------------+-------+---------------+
+; clk                                ; 0.391 ; 0.000         ;
+; timer:inst10|counterDez:inst2|ask  ; 0.391 ; 0.000         ;
+; timer:inst10|counterDez:inst3|ask  ; 0.391 ; 0.000         ;
+; timer:inst10|counterSeis:inst4|ask ; 0.391 ; 0.000         ;
++------------------------------------+-------+---------------+
+
+
++-------------------------------------------------------------+
+; Slow Model Recovery Summary                                 ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; timer:inst10|counterSeis:inst4|ask ; -0.261 ; -0.261        ;
+; timer:inst10|counterDez:inst2|ask  ; 0.617  ; 0.000         ;
+; timer:inst10|counterDez:inst3|ask  ; 0.876  ; 0.000         ;
+; clk                                ; 2.336  ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------+
+; Slow Model Removal Summary                                  ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -1.566 ; -7.830        ;
+; timer:inst10|counterSeis:inst4|ask ; -0.278 ; -1.112        ;
+; timer:inst10|counterDez:inst3|ask  ; -0.106 ; -0.530        ;
+; timer:inst10|counterDez:inst2|ask  ; 0.153  ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                      ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -1.380 ; -6.380        ;
+; timer:inst10|counterDez:inst2|ask  ; -0.500 ; -5.000        ;
+; timer:inst10|counterDez:inst3|ask  ; -0.500 ; -5.000        ;
+; timer:inst10|counterSeis:inst4|ask ; -0.500 ; -5.000        ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'timer:inst10|counterSeis:inst4|ask'                                                                                                                                                ;
++--------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; -1.349 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; -1.309     ; 1.076      ;
+; -1.289 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; -1.309     ; 1.016      ;
+; -1.209 ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; -1.309     ; 0.936      ;
+; -1.078 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; -1.309     ; 0.805      ;
+; -0.260 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 1.296      ;
+; -0.222 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 1.258      ;
+; -0.076 ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 1.112      ;
+; -0.044 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 1.080      ;
+; -0.041 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 1.077      ;
+; 0.036  ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 1.000      ;
+; 0.038  ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.998      ;
+; 0.039  ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.997      ;
+; 0.379  ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.657      ;
++--------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.229 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.265      ;
+; -0.092 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.128      ;
+; -0.083 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.119      ;
+; -0.074 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.110      ;
+; -0.049 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.085      ;
+; -0.045 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.081      ;
+; -0.035 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.071      ;
+; 0.002  ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.034      ;
+; 0.044  ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.992      ;
+; 0.047  ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.989      ;
+; 0.047  ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.989      ;
+; 0.089  ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.947      ;
+; 0.230  ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.806      ;
+; 0.379  ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.657      ;
++--------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'timer:inst10|counterDez:inst2|ask'                                                                                                                                             ;
++--------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.228 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 1.264      ;
+; -0.091 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 1.127      ;
+; -0.090 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 1.126      ;
+; -0.059 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 1.095      ;
+; -0.055 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 1.091      ;
+; -0.055 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 1.091      ;
+; -0.052 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 1.088      ;
+; -0.040 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 1.076      ;
+; -0.001 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 1.037      ;
+; 0.081  ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.955      ;
+; 0.217  ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.819      ;
+; 0.218  ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.818      ;
+; 0.223  ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.813      ;
+; 0.379  ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.657      ;
++--------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'timer:inst10|counterDez:inst3|ask'                                                                                                                                               ;
++--------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.079 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 1.115      ;
+; -0.078 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 1.114      ;
+; -0.071 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 1.107      ;
+; -0.060 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 1.096      ;
+; -0.058 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 1.094      ;
+; -0.038 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 1.074      ;
+; -0.023 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 1.059      ;
+; 0.106  ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.930      ;
+; 0.212  ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.824      ;
+; 0.213  ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.823      ;
+; 0.213  ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.823      ;
+; 0.213  ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.823      ;
+; 0.379  ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.657      ;
++--------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.540 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.806      ;
+; 0.681 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.947      ;
+; 0.723 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.989      ;
+; 0.723 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.989      ;
+; 0.726 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.992      ;
+; 0.768 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.034      ;
+; 0.805 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.071      ;
+; 0.815 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.081      ;
+; 0.819 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.085      ;
+; 0.844 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.110      ;
+; 0.853 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.119      ;
+; 0.862 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.128      ;
+; 0.999 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 1.265      ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'timer:inst10|counterDez:inst2|ask'                                                                                                                                             ;
++-------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.391 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.547 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.813      ;
+; 0.552 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.818      ;
+; 0.553 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.819      ;
+; 0.689 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.955      ;
+; 0.771 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 1.037      ;
+; 0.810 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 1.076      ;
+; 0.822 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 1.088      ;
+; 0.825 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 1.091      ;
+; 0.825 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 1.091      ;
+; 0.829 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 1.095      ;
+; 0.860 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 1.126      ;
+; 0.861 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 1.127      ;
+; 0.998 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 1.264      ;
++-------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'timer:inst10|counterDez:inst3|ask'                                                                                                                                               ;
++-------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.391 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.557 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.823      ;
+; 0.557 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.823      ;
+; 0.557 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.823      ;
+; 0.558 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.824      ;
+; 0.664 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.930      ;
+; 0.793 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 1.059      ;
+; 0.808 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 1.074      ;
+; 0.828 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 1.094      ;
+; 0.830 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 1.096      ;
+; 0.841 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 1.107      ;
+; 0.848 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 1.114      ;
+; 0.849 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 1.115      ;
++-------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'timer:inst10|counterSeis:inst4|ask'                                                                                                                                                ;
++-------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; 0.391 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.657      ;
+; 0.731 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.997      ;
+; 0.732 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.998      ;
+; 0.734 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 1.000      ;
+; 0.811 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 1.077      ;
+; 0.814 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 1.080      ;
+; 0.846 ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 1.112      ;
+; 0.992 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 1.258      ;
+; 1.030 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 1.296      ;
+; 1.848 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; -1.309     ; 0.805      ;
+; 1.979 ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; -1.309     ; 0.936      ;
+; 2.059 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; -1.309     ; 1.016      ;
+; 2.119 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; -1.309     ; 1.076      ;
++-------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'timer:inst10|counterSeis:inst4|ask'                                                                                                                                            ;
++--------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; -0.261 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 1.297      ;
+; 1.048  ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 1.309      ; 1.297      ;
+; 1.048  ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 1.309      ; 1.297      ;
+; 1.048  ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 1.309      ; 1.297      ;
+; 1.048  ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 1.309      ; 1.297      ;
++--------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'timer:inst10|counterDez:inst2|ask'                                                                                                                                          ;
++-------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.617 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 1.302      ; 1.721      ;
+; 0.617 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 1.302      ; 1.721      ;
+; 0.617 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 1.302      ; 1.721      ;
+; 0.617 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 1.302      ; 1.721      ;
+; 0.617 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 1.302      ; 1.721      ;
++-------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'timer:inst10|counterDez:inst3|ask'                                                                                                                                           ;
++-------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                             ; Launch Clock                       ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.876 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 1.303      ; 1.463      ;
+; 0.876 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 1.303      ; 1.463      ;
+; 0.876 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 1.303      ; 1.463      ;
+; 0.876 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 1.303      ; 1.463      ;
+; 0.876 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 1.303      ; 1.463      ;
++-------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Recovery: 'clk'                                                                                                                                                  ;
++-------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; 2.336 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 3.021      ; 1.721      ;
+; 2.336 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|ask  ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 3.021      ; 1.721      ;
+; 2.336 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 3.021      ; 1.721      ;
+; 2.336 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 3.021      ; 1.721      ;
+; 2.336 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 3.021      ; 1.721      ;
++-------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'clk'                                                                                                                                                    ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; -1.566 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 3.021      ; 1.721      ;
+; -1.566 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|ask  ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 3.021      ; 1.721      ;
+; -1.566 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 3.021      ; 1.721      ;
+; -1.566 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 3.021      ; 1.721      ;
+; -1.566 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 3.021      ; 1.721      ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'timer:inst10|counterSeis:inst4|ask'                                                                                                                                             ;
++--------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; -0.278 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 1.309      ; 1.297      ;
+; -0.278 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 1.309      ; 1.297      ;
+; -0.278 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 1.309      ; 1.297      ;
+; -0.278 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 1.309      ; 1.297      ;
+; 1.031  ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 1.297      ;
++--------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'timer:inst10|counterDez:inst3|ask'                                                                                                                                             ;
++--------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                             ; Launch Clock                       ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.106 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 1.303      ; 1.463      ;
+; -0.106 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 1.303      ; 1.463      ;
+; -0.106 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 1.303      ; 1.463      ;
+; -0.106 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 1.303      ; 1.463      ;
+; -0.106 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 1.303      ; 1.463      ;
++--------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Removal: 'timer:inst10|counterDez:inst2|ask'                                                                                                                                           ;
++-------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.153 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 1.302      ; 1.721      ;
+; 0.153 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 1.302      ; 1.721      ;
+; 0.153 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 1.302      ; 1.721      ;
+; 0.153 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 1.302      ; 1.721      ;
+; 0.153 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 1.302      ; 1.721      ;
++-------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|ask|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|ask|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst6|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst6|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst6|datad                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst6|datad                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst6~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst6~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst6~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst6~clkctrl|outclk               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'timer:inst10|counterDez:inst2|ask'                                                                             ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask|regout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask|regout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask~clkctrl|inclk[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask~clkctrl|inclk[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask~clkctrl|outclk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask~clkctrl|outclk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|ask|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|ask|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[3]|clk              ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'timer:inst10|counterDez:inst3|ask'                                                                              ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+-------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|ask|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|ask|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[3]|clk               ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+-------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'timer:inst10|counterSeis:inst4|ask'                                                                              ;
++--------+--------------+----------------+------------------+------------------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                              ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+------------------------------------+------------+-------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|ask|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|ask|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[3]|clk               ;
++--------+--------------+----------------+------------------+------------------------------------+------------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; dc[*]     ; clk                                ; 8.180 ; 8.180 ; Rise       ; clk                                ;
+;  dc[0]    ; clk                                ; 8.180 ; 8.180 ; Rise       ; clk                                ;
+;  dc[1]    ; clk                                ; 7.949 ; 7.949 ; Rise       ; clk                                ;
+;  dc[2]    ; clk                                ; 7.886 ; 7.886 ; Rise       ; clk                                ;
+;  dc[3]    ; clk                                ; 8.150 ; 8.150 ; Rise       ; clk                                ;
+; sg[*]     ; timer:inst10|counterDez:inst2|ask  ; 6.520 ; 6.520 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[0]    ; timer:inst10|counterDez:inst2|ask  ; 6.209 ; 6.209 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[1]    ; timer:inst10|counterDez:inst2|ask  ; 6.228 ; 6.228 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[2]    ; timer:inst10|counterDez:inst2|ask  ; 6.520 ; 6.520 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[3]    ; timer:inst10|counterDez:inst2|ask  ; 6.231 ; 6.231 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; tseg[*]   ; timer:inst10|counterDez:inst3|ask  ; 6.178 ; 6.178 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[0]  ; timer:inst10|counterDez:inst3|ask  ; 6.005 ; 6.005 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[1]  ; timer:inst10|counterDez:inst3|ask  ; 5.981 ; 5.981 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[2]  ; timer:inst10|counterDez:inst3|ask  ; 6.178 ; 6.178 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[3]  ; timer:inst10|counterDez:inst3|ask  ; 5.981 ; 5.981 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; min[*]    ; timer:inst10|counterSeis:inst4|ask ; 6.261 ; 6.261 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[0]   ; timer:inst10|counterSeis:inst4|ask ; 6.227 ; 6.227 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[1]   ; timer:inst10|counterSeis:inst4|ask ; 6.011 ; 6.011 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[2]   ; timer:inst10|counterSeis:inst4|ask ; 6.261 ; 6.261 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[3]   ; timer:inst10|counterSeis:inst4|ask ; 6.017 ; 6.017 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; dc[*]     ; clk                                ; 7.886 ; 7.886 ; Rise       ; clk                                ;
+;  dc[0]    ; clk                                ; 8.180 ; 8.180 ; Rise       ; clk                                ;
+;  dc[1]    ; clk                                ; 7.949 ; 7.949 ; Rise       ; clk                                ;
+;  dc[2]    ; clk                                ; 7.886 ; 7.886 ; Rise       ; clk                                ;
+;  dc[3]    ; clk                                ; 8.150 ; 8.150 ; Rise       ; clk                                ;
+; sg[*]     ; timer:inst10|counterDez:inst2|ask  ; 6.209 ; 6.209 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[0]    ; timer:inst10|counterDez:inst2|ask  ; 6.209 ; 6.209 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[1]    ; timer:inst10|counterDez:inst2|ask  ; 6.228 ; 6.228 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[2]    ; timer:inst10|counterDez:inst2|ask  ; 6.520 ; 6.520 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[3]    ; timer:inst10|counterDez:inst2|ask  ; 6.231 ; 6.231 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; tseg[*]   ; timer:inst10|counterDez:inst3|ask  ; 5.981 ; 5.981 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[0]  ; timer:inst10|counterDez:inst3|ask  ; 6.005 ; 6.005 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[1]  ; timer:inst10|counterDez:inst3|ask  ; 5.981 ; 5.981 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[2]  ; timer:inst10|counterDez:inst3|ask  ; 6.178 ; 6.178 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[3]  ; timer:inst10|counterDez:inst3|ask  ; 5.981 ; 5.981 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; min[*]    ; timer:inst10|counterSeis:inst4|ask ; 6.011 ; 6.011 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[0]   ; timer:inst10|counterSeis:inst4|ask ; 6.227 ; 6.227 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[1]   ; timer:inst10|counterSeis:inst4|ask ; 6.011 ; 6.011 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[2]   ; timer:inst10|counterSeis:inst4|ask ; 6.261 ; 6.261 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[3]   ; timer:inst10|counterSeis:inst4|ask ; 6.017 ; 6.017 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++-------------------------------------------------------------+
+; Fast Model Setup Summary                                    ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; timer:inst10|counterSeis:inst4|ask ; -0.361 ; -0.361        ;
+; timer:inst10|counterDez:inst2|ask  ; 0.429  ; 0.000         ;
+; clk                                ; 0.431  ; 0.000         ;
+; timer:inst10|counterDez:inst3|ask  ; 0.501  ; 0.000         ;
++------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------+
+; Fast Model Hold Summary                                    ;
++------------------------------------+-------+---------------+
+; Clock                              ; Slack ; End Point TNS ;
++------------------------------------+-------+---------------+
+; clk                                ; 0.215 ; 0.000         ;
+; timer:inst10|counterDez:inst2|ask  ; 0.215 ; 0.000         ;
+; timer:inst10|counterDez:inst3|ask  ; 0.215 ; 0.000         ;
+; timer:inst10|counterSeis:inst4|ask ; 0.215 ; 0.000         ;
++------------------------------------+-------+---------------+
+
+
++------------------------------------------------------------+
+; Fast Model Recovery Summary                                ;
++------------------------------------+-------+---------------+
+; Clock                              ; Slack ; End Point TNS ;
++------------------------------------+-------+---------------+
+; timer:inst10|counterSeis:inst4|ask ; 0.299 ; 0.000         ;
+; timer:inst10|counterDez:inst2|ask  ; 0.967 ; 0.000         ;
+; timer:inst10|counterDez:inst3|ask  ; 1.073 ; 0.000         ;
+; clk                                ; 1.825 ; 0.000         ;
++------------------------------------+-------+---------------+
+
+
++-------------------------------------------------------------+
+; Fast Model Removal Summary                                  ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -0.945 ; -4.725        ;
+; timer:inst10|counterSeis:inst4|ask ; -0.279 ; -1.116        ;
+; timer:inst10|counterDez:inst3|ask  ; -0.193 ; -0.965        ;
+; timer:inst10|counterDez:inst2|ask  ; -0.087 ; -0.435        ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                      ;
++------------------------------------+--------+---------------+
+; Clock                              ; Slack  ; End Point TNS ;
++------------------------------------+--------+---------------+
+; clk                                ; -1.380 ; -6.380        ;
+; timer:inst10|counterDez:inst2|ask  ; -0.500 ; -5.000        ;
+; timer:inst10|counterDez:inst3|ask  ; -0.500 ; -5.000        ;
+; timer:inst10|counterSeis:inst4|ask ; -0.500 ; -5.000        ;
++------------------------------------+--------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'timer:inst10|counterSeis:inst4|ask'                                                                                                                                                ;
++--------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                           ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; -0.361 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; -0.860     ; 0.533      ;
+; -0.340 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; -0.860     ; 0.512      ;
+; -0.277 ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; -0.860     ; 0.449      ;
+; -0.228 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; -0.860     ; 0.400      ;
+; 0.422  ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.610      ;
+; 0.433  ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.599      ;
+; 0.501  ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.531      ;
+; 0.513  ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.519      ;
+; 0.515  ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.517      ;
+; 0.543  ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.489      ;
+; 0.544  ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.488      ;
+; 0.546  ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.486      ;
+; 0.665  ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665  ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.367      ;
++--------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'timer:inst10|counterDez:inst2|ask'                                                                                                                                            ;
++-------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.429 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.603      ;
+; 0.488 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.544      ;
+; 0.493 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.539      ;
+; 0.494 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.538      ;
+; 0.505 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.527      ;
+; 0.506 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.526      ;
+; 0.508 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.524      ;
+; 0.509 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.523      ;
+; 0.515 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.517      ;
+; 0.559 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.473      ;
+; 0.623 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.409      ;
+; 0.625 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.407      ;
+; 0.628 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.404      ;
+; 0.665 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.000      ; 0.367      ;
++-------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                               ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.431 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.601      ;
+; 0.494 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.538      ;
+; 0.499 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.533      ;
+; 0.504 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.528      ;
+; 0.505 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.527      ;
+; 0.510 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.522      ;
+; 0.513 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.519      ;
+; 0.514 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.518      ;
+; 0.549 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.483      ;
+; 0.549 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.483      ;
+; 0.549 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.483      ;
+; 0.550 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.482      ;
+; 0.630 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.402      ;
+; 0.665 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[0] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.367      ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'timer:inst10|counterDez:inst3|ask'                                                                                                                                              ;
++-------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.501 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.531      ;
+; 0.502 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.530      ;
+; 0.502 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.530      ;
+; 0.502 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.530      ;
+; 0.504 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.528      ;
+; 0.505 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.527      ;
+; 0.506 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.526      ;
+; 0.587 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.445      ;
+; 0.620 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.412      ;
+; 0.620 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.412      ;
+; 0.620 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.412      ;
+; 0.620 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.412      ;
+; 0.665 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.000      ; 0.367      ;
++-------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[0] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.250 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.402      ;
+; 0.330 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.482      ;
+; 0.331 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.483      ;
+; 0.331 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.483      ;
+; 0.331 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.483      ;
+; 0.366 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.518      ;
+; 0.367 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.519      ;
+; 0.370 ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.522      ;
+; 0.375 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterDez:inst2|ask  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.528      ;
+; 0.381 ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterDez:inst2|q[3] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.533      ;
+; 0.386 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[1] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.538      ;
+; 0.449 ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterDez:inst2|q[2] ; clk          ; clk         ; 0.000        ; 0.000      ; 0.601      ;
++-------+------------------------------------+------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'timer:inst10|counterDez:inst2|ask'                                                                                                                                             ;
++-------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.215 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.252 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.404      ;
+; 0.255 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.407      ;
+; 0.257 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.409      ;
+; 0.321 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.473      ;
+; 0.365 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.517      ;
+; 0.371 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.523      ;
+; 0.372 ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.524      ;
+; 0.374 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.527      ;
+; 0.386 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.538      ;
+; 0.387 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.539      ;
+; 0.392 ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.544      ;
+; 0.451 ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterDez:inst2|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.000      ; 0.603      ;
++-------+------------------------------------+------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'timer:inst10|counterDez:inst3|ask'                                                                                                                                               ;
++-------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.215 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.260 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.412      ;
+; 0.260 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.412      ;
+; 0.260 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.412      ;
+; 0.260 ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.412      ;
+; 0.293 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.445      ;
+; 0.374 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.526      ;
+; 0.375 ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.527      ;
+; 0.376 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.528      ;
+; 0.378 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.530      ;
+; 0.379 ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterDez:inst3|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.000      ; 0.531      ;
++-------+-------------------------------------+-------------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'timer:inst10|counterSeis:inst4|ask'                                                                                                                                                ;
++-------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node                           ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; 0.215 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.367      ;
+; 0.334 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.486      ;
+; 0.336 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.488      ;
+; 0.337 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.489      ;
+; 0.365 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.517      ;
+; 0.367 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.519      ;
+; 0.379 ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.531      ;
+; 0.447 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.599      ;
+; 0.458 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.610      ;
+; 1.108 ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; -0.860     ; 0.400      ;
+; 1.157 ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; -0.860     ; 0.449      ;
+; 1.220 ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; -0.860     ; 0.512      ;
+; 1.241 ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; -0.860     ; 0.533      ;
++-------+-------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'timer:inst10|counterSeis:inst4|ask'                                                                                                                                           ;
++-------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; 0.299 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.000      ; 0.733      ;
+; 1.159 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.860      ; 0.733      ;
+; 1.159 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.860      ; 0.733      ;
+; 1.159 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.860      ; 0.733      ;
+; 1.159 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 1.000        ; 0.860      ; 0.733      ;
++-------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'timer:inst10|counterDez:inst2|ask'                                                                                                                                          ;
++-------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.967 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.859      ; 0.924      ;
+; 0.967 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.859      ; 0.924      ;
+; 0.967 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.859      ; 0.924      ;
+; 0.967 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.859      ; 0.924      ;
+; 0.967 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 1.000        ; 0.859      ; 0.924      ;
++-------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'timer:inst10|counterDez:inst3|ask'                                                                                                                                           ;
++-------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                             ; Launch Clock                       ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; 1.073 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.859      ; 0.818      ;
+; 1.073 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.859      ; 0.818      ;
+; 1.073 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.859      ; 0.818      ;
+; 1.073 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.859      ; 0.818      ;
+; 1.073 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 1.000        ; 0.859      ; 0.818      ;
++-------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Recovery: 'clk'                                                                                                                                                  ;
++-------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; 1.825 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 1.717      ; 0.924      ;
+; 1.825 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|ask  ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 1.717      ; 0.924      ;
+; 1.825 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 1.717      ; 0.924      ;
+; 1.825 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 1.717      ; 0.924      ;
+; 1.825 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 1.000        ; 1.717      ; 0.924      ;
++-------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'clk'                                                                                                                                                    ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+; -0.945 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[2] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 1.717      ; 0.924      ;
+; -0.945 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|ask  ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 1.717      ; 0.924      ;
+; -0.945 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[0] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 1.717      ; 0.924      ;
+; -0.945 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[1] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 1.717      ; 0.924      ;
+; -0.945 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst2|q[3] ; timer:inst10|counterSeis:inst4|ask ; clk         ; 0.000        ; 1.717      ; 0.924      ;
++--------+------------------------------------+------------------------------------+------------------------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'timer:inst10|counterSeis:inst4|ask'                                                                                                                                             ;
++--------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                             ; Launch Clock                       ; Latch Clock                        ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+; -0.279 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.860      ; 0.733      ;
+; -0.279 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.860      ; 0.733      ;
+; -0.279 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.860      ; 0.733      ;
+; -0.279 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.860      ; 0.733      ;
+; 0.581  ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst5|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 0.000        ; 0.000      ; 0.733      ;
++--------+------------------------------------+-------------------------------------+------------------------------------+------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'timer:inst10|counterDez:inst3|ask'                                                                                                                                             ;
++--------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                             ; Launch Clock                       ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.193 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.859      ; 0.818      ;
+; -0.193 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.859      ; 0.818      ;
+; -0.193 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.859      ; 0.818      ;
+; -0.193 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.859      ; 0.818      ;
+; -0.193 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterSeis:inst4|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask ; 0.000        ; 0.859      ; 0.818      ;
++--------+------------------------------------+-------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Removal: 'timer:inst10|counterDez:inst2|ask'                                                                                                                                            ;
++--------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                          ; To Node                            ; Launch Clock                       ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+; -0.087 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[0] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.859      ; 0.924      ;
+; -0.087 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[3] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.859      ; 0.924      ;
+; -0.087 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[1] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.859      ; 0.924      ;
+; -0.087 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|q[2] ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.859      ; 0.924      ;
+; -0.087 ; timer:inst10|counterSeis:inst5|ask ; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask ; 0.000        ; 0.859      ; 0.924      ;
++--------+------------------------------------+------------------------------------+------------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; timer:inst10|counterDez:inst2|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|ask|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|ask|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst10|inst2|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst10|inst2|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst6|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst6|combout                      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst6|datad                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst6|datad                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst6~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst6~clkctrl|inclk[0]             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; inst6~clkctrl|outclk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; inst6~clkctrl|outclk               ;
++--------+--------------+----------------+------------------+-------+------------+------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'timer:inst10|counterDez:inst2|ask'                                                                             ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                             ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; timer:inst10|counterDez:inst3|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask|regout            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask|regout            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask~clkctrl|inclk[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask~clkctrl|inclk[0]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask~clkctrl|outclk    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst2|ask~clkctrl|outclk    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|ask|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|ask|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[0]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[1]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[2]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[3]|clk              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst2|ask ; Rise       ; inst10|inst3|q[3]|clk              ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'timer:inst10|counterDez:inst3|ask'                                                                              ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+-------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; timer:inst10|counterSeis:inst4|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst3|ask~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|ask|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|ask|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterDez:inst3|ask ; Rise       ; inst10|inst4|q[3]|clk               ;
++--------+--------------+----------------+------------------+-----------------------------------+------------+-------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'timer:inst10|counterSeis:inst4|ask'                                                                              ;
++--------+--------------+----------------+------------------+------------------------------------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                              ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+------------------------------------+------------+-------------------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|ask  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; timer:inst10|counterSeis:inst5|q[3] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask|regout             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask~clkctrl|inclk[0]   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst4|ask~clkctrl|outclk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|ask|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|ask|clk                ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[0]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[1]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[2]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[3]|clk               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; timer:inst10|counterSeis:inst4|ask ; Rise       ; inst10|inst5|q[3]|clk               ;
++--------+--------------+----------------+------------------+------------------------------------+------------+-------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; dc[*]     ; clk                                ; 4.469 ; 4.469 ; Rise       ; clk                                ;
+;  dc[0]    ; clk                                ; 4.469 ; 4.469 ; Rise       ; clk                                ;
+;  dc[1]    ; clk                                ; 4.363 ; 4.363 ; Rise       ; clk                                ;
+;  dc[2]    ; clk                                ; 4.309 ; 4.309 ; Rise       ; clk                                ;
+;  dc[3]    ; clk                                ; 4.437 ; 4.437 ; Rise       ; clk                                ;
+; sg[*]     ; timer:inst10|counterDez:inst2|ask  ; 3.649 ; 3.649 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[0]    ; timer:inst10|counterDez:inst2|ask  ; 3.486 ; 3.486 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[1]    ; timer:inst10|counterDez:inst2|ask  ; 3.495 ; 3.495 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[2]    ; timer:inst10|counterDez:inst2|ask  ; 3.649 ; 3.649 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[3]    ; timer:inst10|counterDez:inst2|ask  ; 3.506 ; 3.506 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; tseg[*]   ; timer:inst10|counterDez:inst3|ask  ; 3.461 ; 3.461 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[0]  ; timer:inst10|counterDez:inst3|ask  ; 3.402 ; 3.402 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[1]  ; timer:inst10|counterDez:inst3|ask  ; 3.385 ; 3.385 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[2]  ; timer:inst10|counterDez:inst3|ask  ; 3.461 ; 3.461 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[3]  ; timer:inst10|counterDez:inst3|ask  ; 3.384 ; 3.384 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; min[*]    ; timer:inst10|counterSeis:inst4|ask ; 3.530 ; 3.530 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[0]   ; timer:inst10|counterSeis:inst4|ask ; 3.495 ; 3.495 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[1]   ; timer:inst10|counterSeis:inst4|ask ; 3.403 ; 3.403 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[2]   ; timer:inst10|counterSeis:inst4|ask ; 3.530 ; 3.530 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[3]   ; timer:inst10|counterSeis:inst4|ask ; 3.415 ; 3.415 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; dc[*]     ; clk                                ; 4.309 ; 4.309 ; Rise       ; clk                                ;
+;  dc[0]    ; clk                                ; 4.469 ; 4.469 ; Rise       ; clk                                ;
+;  dc[1]    ; clk                                ; 4.363 ; 4.363 ; Rise       ; clk                                ;
+;  dc[2]    ; clk                                ; 4.309 ; 4.309 ; Rise       ; clk                                ;
+;  dc[3]    ; clk                                ; 4.437 ; 4.437 ; Rise       ; clk                                ;
+; sg[*]     ; timer:inst10|counterDez:inst2|ask  ; 3.486 ; 3.486 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[0]    ; timer:inst10|counterDez:inst2|ask  ; 3.486 ; 3.486 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[1]    ; timer:inst10|counterDez:inst2|ask  ; 3.495 ; 3.495 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[2]    ; timer:inst10|counterDez:inst2|ask  ; 3.649 ; 3.649 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[3]    ; timer:inst10|counterDez:inst2|ask  ; 3.506 ; 3.506 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; tseg[*]   ; timer:inst10|counterDez:inst3|ask  ; 3.384 ; 3.384 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[0]  ; timer:inst10|counterDez:inst3|ask  ; 3.402 ; 3.402 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[1]  ; timer:inst10|counterDez:inst3|ask  ; 3.385 ; 3.385 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[2]  ; timer:inst10|counterDez:inst3|ask  ; 3.461 ; 3.461 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[3]  ; timer:inst10|counterDez:inst3|ask  ; 3.384 ; 3.384 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; min[*]    ; timer:inst10|counterSeis:inst4|ask ; 3.403 ; 3.403 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[0]   ; timer:inst10|counterSeis:inst4|ask ; 3.495 ; 3.495 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[1]   ; timer:inst10|counterSeis:inst4|ask ; 3.403 ; 3.403 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[2]   ; timer:inst10|counterSeis:inst4|ask ; 3.530 ; 3.530 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[3]   ; timer:inst10|counterSeis:inst4|ask ; 3.415 ; 3.415 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                             ;
++-------------------------------------+--------+-------+----------+---------+---------------------+
+; Clock                               ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack                    ; -1.349 ; 0.215 ; -0.261   ; -1.566  ; -1.380              ;
+;  clk                                ; -0.229 ; 0.215 ; 1.825    ; -1.566  ; -1.380              ;
+;  timer:inst10|counterDez:inst2|ask  ; -0.228 ; 0.215 ; 0.617    ; -0.087  ; -0.500              ;
+;  timer:inst10|counterDez:inst3|ask  ; -0.079 ; 0.215 ; 0.876    ; -0.193  ; -0.500              ;
+;  timer:inst10|counterSeis:inst4|ask ; -1.349 ; 0.215 ; -0.261   ; -0.279  ; -0.500              ;
+; Design-wide TNS                     ; -3.08  ; 0.0   ; -0.261   ; -9.472  ; -21.38              ;
+;  clk                                ; -0.439 ; 0.000 ; 0.000    ; -7.830  ; -6.380              ;
+;  timer:inst10|counterDez:inst2|ask  ; -0.468 ; 0.000 ; 0.000    ; -0.435  ; -5.000              ;
+;  timer:inst10|counterDez:inst3|ask  ; -0.266 ; 0.000 ; 0.000    ; -0.965  ; -5.000              ;
+;  timer:inst10|counterSeis:inst4|ask ; -1.907 ; 0.000 ; -0.261   ; -1.116  ; -5.000              ;
++-------------------------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                                            ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; dc[*]     ; clk                                ; 8.180 ; 8.180 ; Rise       ; clk                                ;
+;  dc[0]    ; clk                                ; 8.180 ; 8.180 ; Rise       ; clk                                ;
+;  dc[1]    ; clk                                ; 7.949 ; 7.949 ; Rise       ; clk                                ;
+;  dc[2]    ; clk                                ; 7.886 ; 7.886 ; Rise       ; clk                                ;
+;  dc[3]    ; clk                                ; 8.150 ; 8.150 ; Rise       ; clk                                ;
+; sg[*]     ; timer:inst10|counterDez:inst2|ask  ; 6.520 ; 6.520 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[0]    ; timer:inst10|counterDez:inst2|ask  ; 6.209 ; 6.209 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[1]    ; timer:inst10|counterDez:inst2|ask  ; 6.228 ; 6.228 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[2]    ; timer:inst10|counterDez:inst2|ask  ; 6.520 ; 6.520 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[3]    ; timer:inst10|counterDez:inst2|ask  ; 6.231 ; 6.231 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; tseg[*]   ; timer:inst10|counterDez:inst3|ask  ; 6.178 ; 6.178 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[0]  ; timer:inst10|counterDez:inst3|ask  ; 6.005 ; 6.005 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[1]  ; timer:inst10|counterDez:inst3|ask  ; 5.981 ; 5.981 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[2]  ; timer:inst10|counterDez:inst3|ask  ; 6.178 ; 6.178 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[3]  ; timer:inst10|counterDez:inst3|ask  ; 5.981 ; 5.981 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; min[*]    ; timer:inst10|counterSeis:inst4|ask ; 6.261 ; 6.261 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[0]   ; timer:inst10|counterSeis:inst4|ask ; 6.227 ; 6.227 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[1]   ; timer:inst10|counterSeis:inst4|ask ; 6.011 ; 6.011 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[2]   ; timer:inst10|counterSeis:inst4|ask ; 6.261 ; 6.261 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[3]   ; timer:inst10|counterSeis:inst4|ask ; 6.017 ; 6.017 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                                                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; Data Port ; Clock Port                         ; Rise  ; Fall  ; Clock Edge ; Clock Reference                    ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+; dc[*]     ; clk                                ; 4.309 ; 4.309 ; Rise       ; clk                                ;
+;  dc[0]    ; clk                                ; 4.469 ; 4.469 ; Rise       ; clk                                ;
+;  dc[1]    ; clk                                ; 4.363 ; 4.363 ; Rise       ; clk                                ;
+;  dc[2]    ; clk                                ; 4.309 ; 4.309 ; Rise       ; clk                                ;
+;  dc[3]    ; clk                                ; 4.437 ; 4.437 ; Rise       ; clk                                ;
+; sg[*]     ; timer:inst10|counterDez:inst2|ask  ; 3.486 ; 3.486 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[0]    ; timer:inst10|counterDez:inst2|ask  ; 3.486 ; 3.486 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[1]    ; timer:inst10|counterDez:inst2|ask  ; 3.495 ; 3.495 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[2]    ; timer:inst10|counterDez:inst2|ask  ; 3.649 ; 3.649 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+;  sg[3]    ; timer:inst10|counterDez:inst2|ask  ; 3.506 ; 3.506 ; Rise       ; timer:inst10|counterDez:inst2|ask  ;
+; tseg[*]   ; timer:inst10|counterDez:inst3|ask  ; 3.384 ; 3.384 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[0]  ; timer:inst10|counterDez:inst3|ask  ; 3.402 ; 3.402 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[1]  ; timer:inst10|counterDez:inst3|ask  ; 3.385 ; 3.385 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[2]  ; timer:inst10|counterDez:inst3|ask  ; 3.461 ; 3.461 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+;  tseg[3]  ; timer:inst10|counterDez:inst3|ask  ; 3.384 ; 3.384 ; Rise       ; timer:inst10|counterDez:inst3|ask  ;
+; min[*]    ; timer:inst10|counterSeis:inst4|ask ; 3.403 ; 3.403 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[0]   ; timer:inst10|counterSeis:inst4|ask ; 3.495 ; 3.495 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[1]   ; timer:inst10|counterSeis:inst4|ask ; 3.403 ; 3.403 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[2]   ; timer:inst10|counterSeis:inst4|ask ; 3.530 ; 3.530 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
+;  min[3]   ; timer:inst10|counterSeis:inst4|ask ; 3.415 ; 3.415 ; Rise       ; timer:inst10|counterSeis:inst4|ask ;
++-----------+------------------------------------+-------+-------+------------+------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                     ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; clk                                ; clk                                ; 17       ; 0        ; 0        ; 0        ;
+; timer:inst10|counterDez:inst2|ask  ; timer:inst10|counterDez:inst2|ask  ; 17       ; 0        ; 0        ; 0        ;
+; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst3|ask  ; 16       ; 0        ; 0        ; 0        ;
+; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 16       ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                      ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; clk                                ; clk                                ; 17       ; 0        ; 0        ; 0        ;
+; timer:inst10|counterDez:inst2|ask  ; timer:inst10|counterDez:inst2|ask  ; 17       ; 0        ; 0        ; 0        ;
+; timer:inst10|counterDez:inst3|ask  ; timer:inst10|counterDez:inst3|ask  ; 16       ; 0        ; 0        ; 0        ;
+; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 16       ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                                  ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; timer:inst10|counterSeis:inst4|ask ; clk                                ; 5        ; 0        ; 0        ; 0        ;
+; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask  ; 5        ; 0        ; 0        ; 0        ;
+; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask  ; 5        ; 0        ; 0        ; 0        ;
+; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 5        ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                                   ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; From Clock                         ; To Clock                           ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+; timer:inst10|counterSeis:inst4|ask ; clk                                ; 5        ; 0        ; 0        ; 0        ;
+; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst2|ask  ; 5        ; 0        ; 0        ; 0        ;
+; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterDez:inst3|ask  ; 5        ; 0        ; 0        ; 0        ;
+; timer:inst10|counterSeis:inst4|ask ; timer:inst10|counterSeis:inst4|ask ; 5        ; 0        ; 0        ; 0        ;
++------------------------------------+------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 16    ; 16   ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Feb  4 10:14:21 2025
+Info: Command: quartus_sta projetoFinalLCL -c projetoFinalLCL
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 1 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'projetoFinalLCL.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name timer:inst10|counterSeis:inst4|ask timer:inst10|counterSeis:inst4|ask
+    Info (332105): create_clock -period 1.000 -name timer:inst10|counterDez:inst3|ask timer:inst10|counterDez:inst3|ask
+    Info (332105): create_clock -period 1.000 -name timer:inst10|counterDez:inst2|ask timer:inst10|counterDez:inst2|ask
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.349
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.349        -1.907 timer:inst10|counterSeis:inst4|ask 
+    Info (332119):    -0.229        -0.439 clk 
+    Info (332119):    -0.228        -0.468 timer:inst10|counterDez:inst2|ask 
+    Info (332119):    -0.079        -0.266 timer:inst10|counterDez:inst3|ask 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk 
+    Info (332119):     0.391         0.000 timer:inst10|counterDez:inst2|ask 
+    Info (332119):     0.391         0.000 timer:inst10|counterDez:inst3|ask 
+    Info (332119):     0.391         0.000 timer:inst10|counterSeis:inst4|ask 
+Info (332146): Worst-case recovery slack is -0.261
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.261        -0.261 timer:inst10|counterSeis:inst4|ask 
+    Info (332119):     0.617         0.000 timer:inst10|counterDez:inst2|ask 
+    Info (332119):     0.876         0.000 timer:inst10|counterDez:inst3|ask 
+    Info (332119):     2.336         0.000 clk 
+Info (332146): Worst-case removal slack is -1.566
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.566        -7.830 clk 
+    Info (332119):    -0.278        -1.112 timer:inst10|counterSeis:inst4|ask 
+    Info (332119):    -0.106        -0.530 timer:inst10|counterDez:inst3|ask 
+    Info (332119):     0.153         0.000 timer:inst10|counterDez:inst2|ask 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -6.380 clk 
+    Info (332119):    -0.500        -5.000 timer:inst10|counterDez:inst2|ask 
+    Info (332119):    -0.500        -5.000 timer:inst10|counterDez:inst3|ask 
+    Info (332119):    -0.500        -5.000 timer:inst10|counterSeis:inst4|ask 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.361
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.361        -0.361 timer:inst10|counterSeis:inst4|ask 
+    Info (332119):     0.429         0.000 timer:inst10|counterDez:inst2|ask 
+    Info (332119):     0.431         0.000 clk 
+    Info (332119):     0.501         0.000 timer:inst10|counterDez:inst3|ask 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+    Info (332119):     0.215         0.000 timer:inst10|counterDez:inst2|ask 
+    Info (332119):     0.215         0.000 timer:inst10|counterDez:inst3|ask 
+    Info (332119):     0.215         0.000 timer:inst10|counterSeis:inst4|ask 
+Info (332146): Worst-case recovery slack is 0.299
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.299         0.000 timer:inst10|counterSeis:inst4|ask 
+    Info (332119):     0.967         0.000 timer:inst10|counterDez:inst2|ask 
+    Info (332119):     1.073         0.000 timer:inst10|counterDez:inst3|ask 
+    Info (332119):     1.825         0.000 clk 
+Info (332146): Worst-case removal slack is -0.945
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.945        -4.725 clk 
+    Info (332119):    -0.279        -1.116 timer:inst10|counterSeis:inst4|ask 
+    Info (332119):    -0.193        -0.965 timer:inst10|counterDez:inst3|ask 
+    Info (332119):    -0.087        -0.435 timer:inst10|counterDez:inst2|ask 
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -6.380 clk 
+    Info (332119):    -0.500        -5.000 timer:inst10|counterDez:inst2|ask 
+    Info (332119):    -0.500        -5.000 timer:inst10|counterDez:inst3|ask 
+    Info (332119):    -0.500        -5.000 timer:inst10|counterSeis:inst4|ask 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 305 megabytes
+    Info: Processing ended: Tue Feb  4 10:14:22 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
