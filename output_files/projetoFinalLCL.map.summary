@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Feb  4 10:14:15 2025
+Analysis & Synthesis Status : Successful - Tue Feb  4 11:22:41 2025
 Quartus II 32-bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : projetoFinalLCL
 Top-level Entity Name : projetoFinalLCL
 Family : Cyclone II
-Total logic elements : 23
-    Total combinational functions : 23
-    Dedicated logic registers : 20
-Total registers : 20
+Total logic elements : 22
+    Total combinational functions : 22
+    Dedicated logic registers : 21
+Total registers : 21
 Total pins : 18
 Total virtual pins : 0
 Total memory bits : 0
